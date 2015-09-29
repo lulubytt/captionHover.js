@@ -2,6 +2,7 @@
 An easy jQuery plugin with CSS3 hover effects for tiles with figures and figcaptions.
 
  v1.0
+ 
  To view the demo, simply open /demo/demo.js in a web browser.  
  This project uses Sass.   
  Support: Chrome, Firefox, IE10+
