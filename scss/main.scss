@@ -1,0 +1,1179 @@
+
+// --------- Variables  ----------------
+$white: #fff;
+$dark-grey: #2F3238;
+$light-grey: #74777B;
+$med-grey: #3C414A;
+
+$font: 'Raleway', Arial, sans-serif;
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'feathericons';
+    src:url('../fonts/feathericons/feathericons.eot?-8is7zf');
+    src:url('../fonts/feathericons/feathericons.eot?#iefix-8is7zf') format('embedded-opentype'),
+        url('../fonts/feathericons/feathericons.woff?-8is7zf') format('woff'),
+        url('../fonts/feathericons/feathericons.ttf?-8is7zf') format('truetype'),
+        url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
+}
+
+
+// --------- General settings ----------
+
+.grid {
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    text-align: center;
+}
+
+figure {
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    text-align: center;
+    cursor: pointer;
+
+    @media screen and (max-width: 50em) {
+        display: inline-block;
+        float: none;
+        margin: 10px auto;
+        width: 100%;
+    }
+         
+    img {
+        position: relative;
+        display: block;
+        height: 100%;
+        width: 100%;
+        opacity: 0.8;
+    }
+
+    figcaption {
+        color: $white;
+        text-transform: uppercase;
+        font-size: 1.25em;
+        -webkit-backface-visibility: hidden;
+         backface-visibility: hidden;
+
+        &:after {
+            pointer-events: none;
+        }
+
+        &:before {
+            pointer-events: none;
+        }
+
+        > a {
+            z-index: 1000;
+            text-indent: 200%;
+            white-space: nowrap;
+            font-size: 0;
+            opacity: 0;
+        }
+    }
+
+    h2 {
+        word-spacing: -0.15em;
+        font-weight: 300;
+        margin: 0;
+        font-size: 30px;
+
+        span {
+            font-weight: 800;
+            margin: 0;
+        } 
+    }
+
+    p {
+        margin: 0;
+        letter-spacing: 1px;
+        color: $white;
+        font-weight: 300;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+// --------- Effect 01: Lily  ----------
+
+figure.effect-lily {
+    background: #3085a3;
+
+    img {
+        max-width: none;
+        width: -webkit-calc(100% + 50px);
+        width: calc(100% + 50px);
+        opacity: 0.7;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(-40px,0, 0);
+        transform: translate3d(-40px,0,0);
+    }
+
+    figcaption {
+        text-align: left;
+        width: 90%;
+        padding: 1em;
+        top: 50%;
+    }
+
+    h2, p {
+        -webkit-transform: translate3d(0,40px,0);
+        transform: translate3d(0,40px,0);
+    }
+
+    h2 {
+        -webkit-transition: -webkit-transform 0.35s;
+        transition: transform 0.35s;
+    }
+
+    p {
+        color: rgba(255,255,255,0.8);
+        text-align: left;
+        opacity: 0;
+        -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+        transition: opacity 0.2s, transform 0.35s;
+        margin: 10px 0 100px 0;
+    }
+
+    &:hover p {
+        -webkit-transition-delay: 0.05s;
+        transition-delay: 0.05s;
+        -webkit-transition-duration: 0.35s;
+        transition-duration: 0.35s;
+    }
+
+    &:hover img, &:hover p {
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    &:hover h2 {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+}
+
+
+// --------- Effect 02: sadie  ----------
+
+figure.effect-sadie {
+
+    figcaption {
+
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: -webkit-linear-gradient(top, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+            background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+            content: '';
+            opacity: 0;
+            -webkit-transform: translate3d(0,50%,0);
+            transform: translate3d(0,50%,0);
+        }
+    }
+
+    h2 {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        color: #fff;
+        -webkit-transition: -webkit-transform 0.35s, color 0.35s;
+        transition: transform 0.35s, color 0.35s;
+        -webkit-transform: translate3d(0,-50%,0);
+        transform: translate3d(0,-50%,0);
+    }
+
+    figcaption:before, p {
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+    }
+
+    p {
+        color: #fff;
+        padding: 2em;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 87%;
+        opacity: 0;
+        -webkit-transform: translate3d(0,10px,0);
+        transform: translate3d(0,10px,0);
+
+    }
+
+    &:hover h2 {
+        color: #fff;
+        -webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+        transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+    }
+
+    &:hover figcaption::before, &:hover p {
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+}
+
+
+// --------- Effect 03: honey  ----------
+
+figure.effect-honey {
+    background: #4a3753;
+
+    img {
+        opacity: 0.9;
+        -webkit-transition: opacity 0.35s;
+        transition: opacity 0.35s;
+    }
+
+    &:hover img {
+        opacity: 0.5;
+    }
+
+    h2 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 1em 1.5em;
+        width: 100%;
+        text-align: left;
+        -webkit-transform: translate3d(0,-30px,0);
+        transform: translate3d(0,-30px,0);
+
+        i {
+            font-style: normal;
+            opacity: 0;
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: translate3d(0,-30px,0);
+            transform: translate3d(0,-30px,0);
+        }
+    }
+}
+
+figure.effect-honey figcaption::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: $white;
+    content: '';
+    -webkit-transform: translate3d(0,10px,0);
+    transform: translate3d(0,10px,0);
+}
+
+figure.effect-honey figcaption::before,
+figure.effect-honey h2 {
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+}
+
+figure.effect-honey:hover figcaption::before,
+figure.effect-honey:hover h2,
+figure.effect-honey:hover h2 i {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+
+
+// --------- Effect 04: layla  ----------
+
+figure.effect-layla {
+    background: #CDB38B;
+
+    img {
+        height: 390px;
+    }
+
+    h2 {
+        padding-top: 26%;
+        -webkit-transition: -webkit-transform 0.35s;
+        transition: transform 0.35s;
+    }
+
+    p {
+        color: $white;
+        padding: 0.5em 2em;
+        text-transform: none;
+        opacity: 0;
+        -webkit-transform: translate3d(0,-10px,0);
+        transform: translate3d(0,-10px,0);
+    }
+
+    img, h2 {
+        -webkit-transform: translate3d(0,-30px,0);
+        transform: translate3d(0,-30px,0);
+    }
+
+    figcaption {
+       
+        &:before, &:after {
+            position: absolute;
+            content: '';
+            opacity: 0;
+        }
+
+        &:before {
+            top: 50px;
+            right: 30px;
+            bottom: 50px;
+            left: 30px;
+            border-top: 1px solid $white;
+            border-bottom: 1px solid $white;
+            -webkit-transform: scale(0,1);
+            transform: scale(0,1);
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
+
+        &:after {
+            top: 30px;
+            right: 50px;
+            bottom: 30px;
+            left: 50px;
+            border-right: 1px solid $white;
+            border-left: 1px solid $white;
+            -webkit-transform: scale(1,0);
+            transform: scale(1,0);
+            -webkit-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+        }
+    }
+}
+
+
+figure.effect-layla img,
+figure.effect-layla figcaption::before,
+figure.effect-layla figcaption::after,
+figure.effect-layla p {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-layla:hover img {
+    opacity: 0.7;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+figure.effect-layla:hover figcaption::before,
+figure.effect-layla:hover figcaption::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+figure.effect-layla:hover figcaption::after,
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p,
+figure.effect-layla:hover img {
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+
+
+
+
+
+// --------- Effect 05: zoe  ----------
+
+
+figure.effect-zoe {
+    background: #3085a3;
+
+    figcaption {
+        top: auto;
+        bottom: 0;
+        width: 90%;
+        height: 1.4em;
+        padding: 1em;
+        background: $white;
+        color: #3c4a50;
+        -webkit-transition: -webkit-transform 0.35s;
+        transition: transform 0.35s;
+        -webkit-transform: translate3d(0,100%,0);
+        transform: translate3d(0,100%,0);
+    }
+
+    h2 {
+        float: left;
+        display: inline-block;
+    }
+
+    p.icon-links a {
+        float: right;
+        color: #3c4a50;
+        font-size: 1.4em;
+
+        &:hover, &:focus {
+            color: #252d31;
+        }
+    }
+
+    p.description {
+        position: absolute;
+        bottom: 12em;
+        width: 90%;
+        padding: 0;
+        color: $white;
+        text-transform: none;
+        font-size: 18px;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s;
+        transition: opacity 0.35s;
+        -webkit-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
+    }
+
+    h2, p.icon-links a {
+        -webkit-transition: -webkit-transform 0.35s;
+        transition: transform 0.35s;
+        -webkit-transform: translate3d(0,200%,0);
+        transform: translate3d(0,200%,0);
+    }
+
+    p.icon-links a span::before {
+        display: inline-block;
+        padding: 8px 10px;
+        font-family: 'feathericons';
+        speak: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .icon-eye::before {
+        content: '\e000';
+    }
+
+    .icon-paper-clip::before {
+        content: '\e001';
+    }
+
+    .icon-heart::before {
+        content: '\e024';
+    }
+
+    &:hover p.description {
+        opacity: 1;
+    }
+
+    &:hover figcaption, &:hover h2, &:hover p.icon-links a {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    &:hover h2 {
+        -webkit-transition-delay: 0.05s;
+        transition-delay: 0.05s;
+    }
+
+    &:hover p.icon-links a:nth-child(3) {
+        -webkit-transition-delay: 0.1s;
+        transition-delay: 0.1s;
+    }
+
+    &:hover p.icon-links a:nth-child(2) {
+        -webkit-transition-delay: 0.15s;
+        transition-delay: 0.15s;
+    }
+
+    &:hover p.icon-links a:first-child {
+        -webkit-transition-delay: 0.2s;
+        transition-delay: 0.2s;
+    }
+}
+
+
+// --------- Effect 06: oscar  ----------
+
+figure.effect-oscar {
+    background: #553445 ;
+
+    img {
+        opacity: 0.9;
+        -webkit-transition: opacity 0.35s;
+        transition: opacity 0.35s;
+    }
+
+    figcaption {
+        background-color: rgba(85, 52, 69, 0.5);
+        -webkit-transition: background-color 0.35s;
+        transition: background-color 0.35s;
+
+        &:before {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            bottom: 30px;
+            left: 30px;
+            border: 1px solid $white;
+            content: '';
+        }
+    }
+
+    p {
+        color: $white;
+        padding: 0 40px;
+    }
+
+    h2 {
+        margin: 27% 0 10px 0;
+        -webkit-transition: -webkit-transform 0.35s;
+        transition: transform 0.35s;
+        -webkit-transform: translate3d(0,100%,0);
+        transform: translate3d(0,100%,0);
+    }
+
+    figcaption:before, p {
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    &:hover h2 {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        color: $white;
+    }
+
+    &:hover figcaption:before, &:hover p {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        color: $white;
+    }
+
+    &:hover figcaption {
+        background-color: rgba(58,52,42,0);
+    }
+
+    &:hover img {
+        opacity: 0.4;
+    }
+}
+
+// --------- Effect 07: marley  ----------
+
+figure.effect-marley {
+    background: #3085a3;
+
+    figcaption {
+        text-align: right;
+    }
+
+    h2, p {
+        position: absolute;
+        right: 30px;
+        left: 30px;
+        padding: 10px 0;
+    }
+
+    p {
+        color: $white;
+        bottom: 30px;
+        line-height: 1.5;
+        -webkit-transform: translate3d(0,100%,0);
+        transform: translate3d(0,100%,0);
+    }
+
+    h2 {
+        top: 30px;
+        -webkit-transition: -webkit-transform 0.35s;
+        transition: transform 0.35s;
+        -webkit-transform: translate3d(0,20px,0);
+        transform: translate3d(0,20px,0);
+    }
+
+    &:hover h2 {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    h2:after {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: $white;
+        content: '';
+        -webkit-transform: translate3d(0,40px,0);
+        transform: translate3d(0,40px,0);
+    }
+
+    h2:after, p {
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+    }
+
+    &:hover h2::after, &:hover p {
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+}
+
+// --------- Effect 08: ruby  ----------
+
+figure.effect-ruby {
+    background-color: #17819c;
+
+    figcaption {
+        padding: 0 2em;
+        width:80%;
+    }
+
+    img {
+        opacity: 0.7;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale(1.15);
+        transform: scale(1.15);
+    }
+
+    &:hover img {
+        opacity: 0.5;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    h2 {
+        margin-top: 20%;
+        -webkit-transition: -webkit-transform 0.35s;
+        transition: transform 0.35s;
+        -webkit-transform: translate3d(0,20px,0);
+        transform: translate3d(0,20px,0);
+    }
+
+    p {
+        color: $white;
+        margin: 1em 0 0;
+        padding: 3em;
+        border: 1px solid $white;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(0,20px,0) scale(1.1);
+        transform: translate3d(0,20px,0) scale(1.1);
+    } 
+
+    &:hover h2 {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    &:hover p {
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0) scale(1);
+        transform: translate3d(0,0,0) scale(1);
+    }
+}
+
+// --------- Effect 09: roxy  ----------
+
+figure.effect-roxy {
+    background: -webkit-linear-gradient(45deg, #ff89e9 0%, #05abe0 100%);
+    background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);
+
+    img {
+        max-width: none;
+        width: -webkit-calc(100% + 60px);
+        width: calc(100% + 60px);
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(-50px,0,0);
+        transform: translate3d(-50px,0,0);
+    }
+
+    figcaption {
+        padding: 0 3em;
+        width: 70%;
+        text-align: left;
+
+        &:before {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            bottom: 30px;
+            left: 30px;
+            border: 1px solid $white;
+            content: '';
+            opacity: 0;
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: translate3d(-20px,0,0);
+            transform: translate3d(-20px,0,0);
+        }
+    }
+
+    h2 {
+        padding: 40% 0 10px 0;
+    }
+
+    p {
+        color: $white;
+        text-align: left;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(-10px,0,0);
+        transform: translate3d(-10px,0,0);
+    }
+
+    &:hover img {
+        opacity: 0.7;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    &:hover figcaption:before, &:hover p {
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+}
+
+// --------- Effect 10: sophie  ----------
+
+figure.effect-sophie {
+    background: #9e5406;
+
+    img {
+        opacity: 0.7;
+        -webkit-transition: opacity 0.35s;
+        transition: opacity 0.35s;
+    }
+
+    &:hover img {
+        opacity: 0.4;
+    }
+
+    figcaption {
+
+        &:before, &:after {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            bottom: 30px;
+            left: 30px;
+            content: '';
+            opacity: 0;
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+        }
+
+        &:before {
+             border-top: 1px solid $white;
+            border-bottom: 1px solid $white;
+            -webkit-transform: scale(0,1);
+            transform: scale(0,1);
+        }
+
+        &:after {
+            border-right: 1px solid $white;
+            border-left: 1px solid $white;
+            -webkit-transform: scale(1,0);
+            transform: scale(1,0);
+        }
+    }
+
+    h2 {
+        padding-top: 30%;
+        -webkit-transition: -webkit-transform 0.35s;
+        transition: transform 0.35s;
+        -webkit-transform: translate3d(0,-20px,0);
+        transform: translate3d(0,-20px,0);
+    }
+
+    p {
+        color: $white;
+        padding: 20px 2.5em;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(0,20px,0);
+        transform: translate3d(0,20px,0);
+    }
+
+    &:hover figcaption::before, &:hover figcaption::after {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    &:hover h2, &:hover p {
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+}
+
+
+// --------- Effect 11: romeo  ----------
+
+figure.effect-romeo {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    background: #3085a3;
+
+    img {
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(0,0,300px);
+        transform: translate3d(0,0,300px);
+    }
+
+    &:hover img {
+        opacity: 0.6;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    figcaption {
+
+        &:before, &:after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80%;
+            height: 1px;
+            background: $white;
+            content: '';
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: translate3d(-50%,-50%,0);
+            transform: translate3d(-50%,-50%,0);
+        }
+    }
+
+    &:hover figcaption::before {
+        opacity: 0.5;
+        -webkit-transform: translate3d(-50%,-50%,0) rotate(45deg);
+        transform: translate3d(-50%,-50%,0) rotate(45deg);
+    }
+
+    &:hover figcaption::after {
+        opacity: 0.5;
+        -webkit-transform: translate3d(-50%,-50%,0) rotate(-45deg);
+        transform: translate3d(-50%,-50%,0) rotate(-45deg);
+    }
+
+    h2, p {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        -webkit-transition: -webkit-transform 0.35s;
+        transition: transform 0.35s;
+    }
+
+    h2 {
+        -webkit-transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
+        transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
+    }
+
+    p {
+        color: $white;
+        padding: 0.25em 0;
+        -webkit-transform: translate3d(0,-50%,0) translate3d(0,150%,0);
+        transform: translate3d(0,-50%,0) translate3d(0,150%,0);
+    }
+
+    &:hover h2 {
+        -webkit-transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
+        transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
+    }
+
+    &:hover p {
+        -webkit-transform: translate3d(0,-50%,0) translate3d(0,100%,0);
+        transform: translate3d(0,-50%,0) translate3d(0,100%,0);
+    }
+}
+
+
+// --------- Effect 12: dexter  ----------
+
+figure.effect-dexter {
+    background: -webkit-linear-gradient(top, rgba(37,141,200,1) 0%, rgba(104,60,19,1) 100%);
+    background: linear-gradient(to bottom, rgba(37,141,200,1) 0%,rgba(104,60,19,1) 100%); 
+
+    img {
+        -webkit-transition: opacity 0.35s;
+        transition: opacity 0.35s;
+    }
+
+    &:hover img {
+        opacity: 0.4;
+    }
+
+    figcaption {
+        width:71%;
+        height: 217px;
+        padding: 3em;
+        text-align: left;
+
+        &:after {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            left: 30px;
+            height: -webkit-calc(45% - 30px);
+            height: calc(45% - 30px);
+            border: 7px solid $white;
+            content: '';
+            -webkit-transition: -webkit-transform 0.35s;
+            transition: transform 0.35s;
+            -webkit-transform: translate3d(0,-100%,0);
+            transform: translate3d(0,-100%,0);
+        }
+    }
+
+    &:hover figcaption::after {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    p {
+        color:$white;
+        position: absolute;
+        right: 60px;
+        bottom: 60px;
+        left: 60px;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(0,-100px,0);
+        transform: translate3d(0,-100px,0);
+    }
+
+    &:hover p {
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+}
+
+
+// --------- Effect 13: sarah  ----------
+
+figure.effect-sarah {
+    background: #42b078;
+
+    img {
+        max-width: none;
+        width: -webkit-calc(100% + 20px);
+        width: calc(100% + 20px);
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(-10px,0,0);
+        transform: translate3d(-10px,0,0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    :hover img {
+        opacity: 0.4;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    figcaption {
+        padding:2em;
+        width:80%;
+        text-align: left;
+    }
+
+    h2 {
+        position: relative;
+        overflow: hidden;
+        padding: 0.5em 0;
+
+        &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: $white;
+            content: '';
+            -webkit-transition: -webkit-transform 0.35s;
+            transition: transform 0.35s;
+            -webkit-transform: translate3d(-100%,0,0);
+            transform: translate3d(-100%,0,0);
+        }
+    }
+
+    &:hover h2:after {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+     p {
+        color:$white;
+        padding: 1em 0;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(100%,0,0);
+        transform: translate3d(100%,0,0);
+    }
+
+    &:hover p {
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+}
+
+// --------- Effect 14: chico  ----------
+
+figure.effect-chico {
+    background: #3085a3;
+
+    img {
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale(1.12);
+        transform: scale(1.12);
+    }
+
+    &:hover img {
+        opacity: 0.5;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    figcaption {
+        padding: 3em;
+        width:70%;
+        height: 217px;
+
+        &:before {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            bottom: 30px;
+            left: 30px;
+            border: 1px solid $white;
+            content: '';
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+    }
+
+    figcaption:before, p {
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+    }
+
+    h2 {
+        padding: 20% 0 20px 0;
+    }
+
+    p {
+        margin: 0 auto;
+        color: $white;
+        max-width: 200px;
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+
+    &:hover figcaption::before, &:hover p {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
+// --------- Effect 15: milo  ----------
+
+figure.effect-milo {
+    background: #2e5d5a;
+
+    img {
+        max-width: none;
+        width: -webkit-calc(100% + 60px);
+        width: calc(100% + 60px);
+        opacity: 1;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(-30px,0,0) scale(1.12);
+        transform: translate3d(-30px,0,0) scale(1.12);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    &:hover img {
+        opacity: 0.5;
+        -webkit-transform: translate3d(0,0,0) scale(1);
+        transform: translate3d(0,0,0) scale(1);
+    }
+
+    figcaption {
+        padding: 2em;
+        width:80%;
+        height: 73%;
+    }
+
+    h2 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 1em 1.2em;
+    }
+
+    p {
+        color: $white;
+        padding: 0 10px 0 0;
+        width: 50%;
+        border-right: 1px solid $white;
+        text-align: right;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(-40px,0,0);
+        transform: translate3d(-40px,0,0);
+    }
+
+    &:hover p {
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+}

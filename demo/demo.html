@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CaptionHover.js | Marcus Thomas LLC</title>
+		
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'>
+		<link href="../css/normalize.css" rel="stylesheet" type='text/css' />
+		<link href="../css/main.css" rel="stylesheet" type='text/css' />
+		<link href="../css/demo.css" rel="stylesheet" type='text/css' />
+	</head>
+	<body>
+		<header>
+			<a href="http://marcusthomasllc.com/"><img src="../img/logo.png" width="200"/></a>
+		</header>
+		<div class="container">
+			<h1>CaptionHover.js</h1>
+			<p class="intro">An easy jQuery plugin with CSS3 hover effects for tiles with figures and figcaptions. <br /> As seen in <a href="http://tympanus.net/codrops/2014/06/19/ideas-for-subtle-hover-effects/">Codrops.</a> </p>
+			
+			<a class="btn-download" href="#">Get from GitHub</a>
+
+			<div class="usage-wrapper">
+				<h2>Usage</h2>
+				<p>To view the demo, simply open /demo/demo.js in a web browser.  This project uses Sass.   Support: Chrome, Firefox, IE10+</p>
+				<ol> 
+					<li> Download from GitHub and add <strong>main.css</strong> and <strong>captionHover.js</strong> to your project. </li>
+					<li> Build the HTML structure like the demos below. </li>
+					<li> Add the js call before the /body to initiate the plugin with the desired effect and options. View examples below.</li>
+				</ol>
+			</div>
+
+			<div class="content">
+				<h2>Lily</h2>
+				<div class="grid">
+					<figure class="tile-1">
+						<img src="../img/pattern1.jpg"/>
+						<figcaption>
+							<div>
+								<h2>This is <span>Lily</span></h2>
+								<p>Lily has a subtle image transition and display of caption</p>
+							</div>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="tile-1 last">
+						<img src="../img/pattern2.jpg" />
+						<figcaption>
+							<div>
+								<h2>This is <span>Lily</span></h2>
+								<p>Lily has a subtle image transition and display of caption</p>
+							</div>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+
+					<div class="options-wrapper">
+						<h3> Options </h3>
+						<table>
+							<tr>
+								<td>fx:</td>
+								<td>'lily'</td>
+							</tr>
+							<tr>
+								<td>figWidth   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>figHeight   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>headColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>captionColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>overlay   :</td>
+								<td>hex | html color</td>
+							</tr>
+						</table>
+					</div>
+					<div class="example-wrapper">
+						<h3> Example</h3>
+							<pre>
+								$('.myElement').captionHover({
+									&nbsp;&nbsp;&nbsp;&nbsp;fx: 'lily',
+									&nbsp;&nbsp;&nbsp;&nbsp;figWidth: '49%',
+									&nbsp;&nbsp;&nbsp;&nbsp;headColor: '#fff',
+									&nbsp;&nbsp;&nbsp;&nbsp;captionColor: #fff,
+									&nbsp;&nbsp;&nbsp;&nbsp;overlay: '#3085a3'
+								});
+							</pre>
+					</div>
+				</div>
+				<h2>Sadie</h2>
+				<div class="grid">
+					<figure class="tile-2">
+						<img src="../img/pattern1.jpg"/>
+						<figcaption>
+							<h2>This is <span>Sadie</span></h2>
+							<p>Sadie has a gradient overlay. <br>And a hidden caption.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="tile-2 last">
+						<img src="../img/pattern2.jpg" />
+						<figcaption>
+							<h2>This is <span>Sadie</span></h2>
+							<p>Sadie has a gradient overlay. <br>And a hidden caption.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+
+					<div class="options-wrapper">
+						<h3> Options </h3>
+						<table>
+							<tr>
+								<td>fx:</td>
+								<td>'sadie'</td>
+							</tr>
+							<tr>
+								<td>figWidth   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>figHeight   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>headColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>captionColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>overlay   :</td>
+								<td>hex | html color</td>
+							</tr>
+						</table>
+					</div>
+					<div class="example-wrapper">
+						<h3> Example</h3>
+							<pre>
+								$('.myElement').captionHover({
+									&nbsp;&nbsp;&nbsp;&nbsp;fx: 'sadie',
+									&nbsp;&nbsp;&nbsp;&nbsp;headColor: '#fff',
+									&nbsp;&nbsp;&nbsp;&nbsp;captionColor: #fff,
+									&nbsp;&nbsp;&nbsp;&nbsp;overlay: '#3085a3'
+								});
+							</pre>
+					</div>
+				</div>
+				<h2>Honey</h2>
+				<div class="grid">
+					<figure class="tile-3">
+						<img src="../img/pattern1.jpg" alt="img04"/>
+						<figcaption>
+							<h2>This is <span>Honey</span> <i>effect</i></h2>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="tile-3 last">
+						<img src="../img/pattern2.jpg" alt="img05"/>
+						<figcaption>
+							<h2>This is <span>Honey</span> <i>effect</i></h2>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<div class="options-wrapper">
+						<h3> Options </h3>
+						<table>
+							<tr>
+								<td>fx:</td>
+								<td>'honey'</td>
+							</tr>
+							<tr>
+								<td>figWidth   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>figHeight   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>headColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>captionColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>overlay   :</td>
+								<td>hex | html color | CSS3 gradient</td>
+							</tr>
+
+						</table>
+					</div>
+					<div class="example-wrapper">
+						<h3> Example</h3>
+						<pre>
+							$('.myElement').captionHover({
+								&nbsp;&nbsp;&nbsp;&nbsp;fx: 'honey',
+								&nbsp;&nbsp;&nbsp;&nbsp;headColor: '#fff',
+								&nbsp;&nbsp;&nbsp;&nbsp;captionColor: #fff,
+								&nbsp;&nbsp;&nbsp;&nbsp;overlay: '#3085a3'
+							});
+						</pre>
+					</div>
+
+				</div>
+				<h2>Layla</h2>
+				<div class="grid">
+					<figure class="tile-4">
+						<img src="../img/pattern1.jpg" />
+						<figcaption>
+							<h2>This is <span>Layla</span></h2>
+							<p>Layla has lineal transformation and a hidden caption.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="last tile-4">
+						<img src="../img/pattern2.jpg"/>
+						<figcaption>
+							<h2>This is <span>Layla</span></h2>
+							<p>Layla has lineal transformation and a hidden caption.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+
+					<div class="options-wrapper">
+						<h3> Options </h3>
+						<table>
+							<tr>
+								<td>fx:</td>
+								<td>'layla'</td>
+							</tr>
+							<tr>
+								<td>figWidth   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>figHeight   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>headColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>captionColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>overlay   :</td>
+								<td>hex | html color | CSS3 gradient</td>
+							</tr>
+						</table>
+					</div>
+					<div class="example-wrapper">
+						<h3> Example</h3>
+						<pre>
+							$('.myElement').captionHover({
+								&nbsp;&nbsp;&nbsp;&nbsp;fx: 'layla',
+								&nbsp;&nbsp;&nbsp;&nbsp;headColor: '#fff',
+								&nbsp;&nbsp;&nbsp;&nbsp;captionColor: #fff,
+								&nbsp;&nbsp;&nbsp;&nbsp;overlay: '#3085a3',
+							});
+							//border colors can be changed via CSS
+						</pre>
+					</div>
+				</div>
+				<h2>Zoe</h2>
+				<div class="grid">
+					<figure class="tile-5">
+						<img src="../img/pattern1.jpg" />
+						<figcaption>
+							<h2>This is <span> Zoe</span></h2>
+							<p class="icon-links">
+								<a href="#"><span class="icon-heart"></span></a>
+								<a href="#"><span class="icon-eye"></span></a>
+								<a href="#"><span class="icon-paper-clip"></span></a>
+							</p>
+							<p class="description">Zoe has a hidden caption tile and icons.</p>
+						</figcaption>			
+					</figure>
+					<figure class="tile-5 last">
+						<img src="../img/pattern2.jpg"/>
+						<figcaption>
+							<h2>This is <span>Zoe</span></h2>
+							<p class="icon-links">
+								<a href="#"><span class="icon-heart"></span></a>
+								<a href="#"><span class="icon-eye"></span></a>
+								<a href="#"><span class="icon-paper-clip"></span></a>
+							</p>
+							<p class="description">Zoe has a hidden caption tile and icons. Longer texts are accomodated automatically.</p>
+						</figcaption>			
+					</figure>
+					<div class="options-wrapper">
+						<h3> Options </h3>
+						<table>
+							<tr>
+								<td>fx:</td>
+								<td>'zoe'</td>
+							</tr>
+							<tr>
+								<td>figWidth   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>figHeight   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>headColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>captionColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>overlay   :</td>
+								<td>hex | html color | CSS3 gradient</td>
+							</tr>
+							<tr>
+								<td>bgCaption   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>iconColor   :</td>
+								<td>hex | html color </td>
+							</tr>
+						</table>
+					</div>
+					<div class="example-wrapper">
+						<h3> Example</h3>
+						<pre>
+							$('.myElement').captionHover({
+								&nbsp;&nbsp;&nbsp;&nbsp;fx: 'zoe',
+								&nbsp;&nbsp;&nbsp;&nbsp;headColor: '#fff',
+								&nbsp;&nbsp;&nbsp;&nbsp;captionColor: #fff,
+								&nbsp;&nbsp;&nbsp;&nbsp;overlay: '#3085a3',
+								&nbsp;&nbsp;&nbsp;&nbsp;bgCaption: '#CDB7B5',
+								&nbsp;&nbsp;&nbsp;&nbsp;iconColor: '##3c4a50',
+							});
+			
+						</pre>
+					</div>
+				</div>
+				<h2>Oscar</h2>
+				<div class="grid">
+					<figure class="tile-6">
+						<img src="../img/pattern1.jpg" />
+						<figcaption>
+							<h2>This is <span>Oscar</span></h2>
+							<p>Oscar has a square animation and a hidden caption, plus a heavy overlay.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="tile-6 last">
+						<img src="../img/pattern2.jpg" />
+						<figcaption>
+							<h2>This is <span>Oscar</span></h2>
+							<p>Oscar has a square animation and a hidden caption, plus a heavy overlay.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<div class="options-wrapper">
+						<h3> Options </h3>
+						<table>
+							<tr>
+								<td>fx:</td>
+								<td>'oscar'</td>
+							</tr>
+							<tr>
+								<td>figWidth   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>figHeight   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>headColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>captionColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>overlay   :</td>
+								<td>hex | html color | CSS3 gradient</td>
+							</tr>
+						</table>
+					</div>
+					<div class="example-wrapper">
+						<h3> Example</h3>
+						<pre>
+							$('.myElement').captionHover({
+								&nbsp;&nbsp;&nbsp;&nbsp;fx: 'oscar',
+								&nbsp;&nbsp;&nbsp;&nbsp;headColor: '#fff',
+								&nbsp;&nbsp;&nbsp;&nbsp;captionColor: #fff,
+								&nbsp;&nbsp;&nbsp;&nbsp;overlay: '#3085a3'
+							});
+							//border colors can be changed via CSS
+						</pre>
+					</div>
+				</div>
+				<h2>Marley</h2>
+				<div class="grid">
+					<figure class="tile-7">
+						<img src="../img/pattern1.jpg" />
+						<figcaption>
+							<h2>This is <span>Marley</span></h2>
+							<p>Marley has a thick border and a hidden caption</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="tile-7 last">
+						<img src="../img/pattern2.jpg" />
+						<figcaption>
+							<h2>This is <span>Marley</span></h2>
+							<p>Marley has a thick border and a hidden caption</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+
+					<div class="options-wrapper">
+						<h3> Options </h3>
+						<table>
+							<tr>
+								<td>fx:</td>
+								<td>'marley'</td>
+							</tr>
+							<tr>
+								<td>figWidth   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>figHeight   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>headColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>captionColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>overlay   :</td>
+								<td>hex | html color | CSS3 gradient</td>
+							</tr>
+						</table>
+					</div>
+					<div class="example-wrapper">
+						<h3> Example</h3>
+						<pre>
+							$('.myElement').captionHover({
+								&nbsp;&nbsp;&nbsp;&nbsp;fx: 'marley',
+								&nbsp;&nbsp;&nbsp;&nbsp;headColor: '#fff',
+								&nbsp;&nbsp;&nbsp;&nbsp;captionColor: #fff,
+								&nbsp;&nbsp;&nbsp;&nbsp;overlay: '#3085a3'
+							});
+							//border color and thickness can be changed via CSS
+						</pre>
+					</div>
+				</div>
+				<h2>Ruby</h2>
+				<div class="grid">
+					<figure class="tile-8">
+						<img src="../img/pattern1.jpg" />
+						<figcaption>
+							<h2>This is <span>Ruby</span></h2>
+							<p>Ruby has a caption inside an animated box with borders (and the image scales a bit).</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="tile-8 last">
+						<img src="../img/pattern2.jpg" />
+						<figcaption>
+							<h2>This is <span>Ruby</span></h2>
+							<p>Ruby has a caption inside an animated box with borders (and the image scales a bit).</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<div class="options-wrapper">
+						<h3> Options </h3>
+						<table>
+							<tr>
+								<td>fx:</td>
+								<td>'ruby'</td>
+							</tr>
+							<tr>
+								<td>figWidth   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>figHeight   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>headColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>captionColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>overlay   :</td>
+								<td>hex | html color | CSS3 gradient</td>
+							</tr>
+						</table>
+					</div>
+					<div class="example-wrapper">
+						<h3> Example</h3>
+						<pre>
+							$('.myElement').captionHover({
+								&nbsp;&nbsp;&nbsp;&nbsp;fx: 'ruby',
+								&nbsp;&nbsp;&nbsp;&nbsp;headColor: '#fff',
+								&nbsp;&nbsp;&nbsp;&nbsp;captionColor: #fff,
+								&nbsp;&nbsp;&nbsp;&nbsp;overlay: '#3085a3'
+							});
+							//border color can be changed via CSS
+						</pre>
+					</div>
+				</div>
+				<h2>Roxy</h2>
+				<div class="grid">
+					<figure class="tile-9">
+						<img src="../img/pattern1.jpg" />
+						<figcaption>
+							<h2>This is <span>Roxy</span></h2>
+							<p>Roxy has an image transformation and a hidden caption...oh, and a multicolored overlay</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="tile-9 last">
+						<img src="../img/pattern2.jpg" />
+						<figcaption>
+							<h2>This is <span>Roxy</span></h2>
+							<p>Roxy has an image transformation and a hidden caption...oh, and a multicolored overlay.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<div class="options-wrapper">
+						<h3> Options </h3>
+						<table>
+							<tr>
+								<td>fx:</td>
+								<td>'roxy'</td>
+							</tr>
+							<tr>
+								<td>figWidth   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>figHeight   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>headColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>captionColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>overlay   :</td>
+								<td>hex | html color | CSS3 gradient</td>
+							</tr>
+						</table>
+					</div>
+					<div class="example-wrapper">
+						<h3> Example</h3>
+						<pre>
+							$('.myElement').captionHover({
+								&nbsp;&nbsp;&nbsp;&nbsp;fx: 'roxy',
+								&nbsp;&nbsp;&nbsp;&nbsp;headColor: '#fff',
+								&nbsp;&nbsp;&nbsp;&nbsp;captionColor: #fff,
+								&nbsp;&nbsp;&nbsp;&nbsp;overlay: 'linear-gradient(45deg, #ff89e9 0%, #05abe0 100%)'
+							});
+							//border color and gradient can be changed in CSS
+						</pre>
+					</div>
+				</div>
+				<h2>Sophie</h2>
+				<div class="grid">
+					<figure class="tile-10">
+						<img src="../img/pattern1.jpg" />
+						<figcaption>
+							<h2>This is <span>Sophie</span></h2>
+							<p>Sophie is much like the others...but different.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="tile-10 last">
+						<img src="../img/pattern2.jpg"/>
+						<figcaption>
+							<h2>This is <span>Sophie</span></h2>
+							<p>Sophie is much like the others...but different.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<div class="options-wrapper">
+						<h3> Options </h3>
+						<table>
+							<tr>
+								<td>fx:</td>
+								<td>'sophie'</td>
+							</tr>
+							<tr>
+								<td>figWidth   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>figHeight   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>headColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>captionColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>overlay   :</td>
+								<td>hex | html color | CSS3 gradient</td>
+							</tr>
+						</table>
+					</div>
+					<div class="example-wrapper">
+						<h3> Example</h3>
+						<pre>
+							$('.myElement').captionHover({
+								&nbsp;&nbsp;&nbsp;&nbsp;fx: 'sophie',
+								&nbsp;&nbsp;&nbsp;&nbsp;headColor: '#fff',
+								&nbsp;&nbsp;&nbsp;&nbsp;captionColor: #fff,
+								&nbsp;&nbsp;&nbsp;&nbsp;overlay: '#9e5406'
+							});
+							//border color and gradient can be changed in CSS
+						</pre>
+					</div>
+				</div>
+				
+				<h2>Romeo</h2>
+				<div class="grid">
+					<figure class="tile-11">
+						<img src="../img/pattern1.jpg" />
+						<figcaption>
+							<h2>This is <span>Romeo</span></h2>
+							<p>Romeo has some cool line animations.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="tile-11 last">
+						<img src="../img/pattern2.jpg"/>
+						<figcaption>
+							<h2>This is  <span>Romeo</span></h2>
+							<p>Romeo has some cool line animations.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<div class="options-wrapper">
+						<h3> Options </h3>
+						<table>
+							<tr>
+								<td>fx:</td>
+								<td>'romeo'</td>
+							</tr>
+							<tr>
+								<td>figWidth   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>figHeight   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>headColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>captionColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>overlay   :</td>
+								<td>hex | html color | CSS3 gradient</td>
+							</tr>
+						</table>
+					</div>
+					<div class="example-wrapper">
+						<h3> Example</h3>
+						<pre>
+							$('.myElement').captionHover({
+								&nbsp;&nbsp;&nbsp;&nbsp;fx: 'romeo',
+								&nbsp;&nbsp;&nbsp;&nbsp;headColor: '#fff',
+								&nbsp;&nbsp;&nbsp;&nbsp;captionColor: #fff,
+								&nbsp;&nbsp;&nbsp;&nbsp;overlay: #3085a3,
+							});
+							//border color can be changed in CSS
+						</pre>
+					</div>
+				</div>
+				<h2>Dexter</h2>
+				<div class="grid">
+					<figure class="tile-12">
+						<img src="../img/pattern1.jpg"/>
+						<figcaption>
+							<h2>This is <span>Dexter</span></h2>
+							<p>Dexter has ahidden caption inside an animated box.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="tile-12 last">
+						<img src="../img/pattern2.jpg"/>
+						<figcaption>
+							<h2>This is <span>Dexter</span></h2>
+							<p>Dexter has ahidden caption inside an animated box.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<div class="options-wrapper">
+						<h3> Options </h3>
+						<table>
+							<tr>
+								<td>fx:</td>
+								<td>'dexter'</td>
+							</tr>
+							<tr>
+								<td>figWidth   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>figHeight   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>headColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>captionColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>overlay   :</td>
+								<td>hex | html color | CSS3 gradient</td>
+							</tr>
+						</table>
+					</div>
+					<div class="example-wrapper">
+						<h3> Example</h3>
+						<pre>
+							$('.myElement').captionHover({
+								&nbsp;&nbsp;&nbsp;&nbsp;fx: 'dexter',
+								&nbsp;&nbsp;&nbsp;&nbsp;headColor: '#fff',
+								&nbsp;&nbsp;&nbsp;&nbsp;captionColor: #fff,
+								&nbsp;&nbsp;&nbsp;&nbsp;overlay: 'linear-gradient(to bottom, #258dc8 0%, #683c13 100%)'
+							});
+							//border color can be changed in CSS
+						</pre>
+					</div>
+				</div>
+				<h2>Sarah</h2>
+				<div class="grid">
+					<figure class="tile-13">
+						<img src="../img/pattern1.jpg"/>
+						<figcaption>
+							<h2>This is <span>Sarah</span></h2>
+							<p>Sarah has an animated caption and border.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="tile-13 last">
+						<img src="../img/pattern2.jpg"/>
+						<figcaption>
+							<h2>This is <span>Sarah</span></h2>
+							<p>Sarah has an animated caption and border.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<div class="options-wrapper">
+						<h3> Options </h3>
+						<table>
+							<tr>
+								<td>fx:</td>
+								<td>'sarah'</td>
+							</tr>
+							<tr>
+								<td>figWidth   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>figHeight   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>headColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>captionColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>overlay   :</td>
+								<td>hex | html color | CSS3 gradient</td>
+							</tr>
+						</table>
+					</div>
+					<div class="example-wrapper">
+						<h3> Example</h3>
+						<pre>
+							$('.myElement').captionHover({
+								&nbsp;&nbsp;&nbsp;&nbsp;fx: 'sarah',
+								&nbsp;&nbsp;&nbsp;&nbsp;headColor: '#fff',
+								&nbsp;&nbsp;&nbsp;&nbsp;captionColor: #fff,
+								&nbsp;&nbsp;&nbsp;&nbsp;overlay: #42b078
+							});
+							//border color can be changed in CSS
+						</pre>
+					</div>
+				</div>
+				<h2>Chico</h2>
+				<div class="grid">
+					<figure class="tile-14">
+						<img src="../img/pattern1.jpg" />
+						<figcaption>
+							<h2>This is <span>Chico</span></h2>
+							<p>Chico has more animations and scaling images.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="tile-14 last">
+						<img src="../img/pattern2.jpg"/>
+						<figcaption>
+							<h2>This is <span>Chico</span></h2>
+							<p>Chico has more animations and scaling images.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					
+				</div><div class="options-wrapper">
+						<h3> Options </h3>
+						<table>
+							<tr>
+								<td>fx:</td>
+								<td>'chico'</td>
+							</tr>
+							<tr>
+								<td>figWidth   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>figHeight   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>headColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>captionColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>overlay   :</td>
+								<td>hex | html color | CSS3 gradient</td>
+							</tr>
+						</table>
+					</div>
+					<div class="example-wrapper">
+						<h3> Example</h3>
+						<pre>
+							$('.myElement').captionHover({
+								&nbsp;&nbsp;&nbsp;&nbsp;fx: 'chico',
+								&nbsp;&nbsp;&nbsp;&nbsp;headColor: '#fff',
+								&nbsp;&nbsp;&nbsp;&nbsp;captionColor: #fff,
+								&nbsp;&nbsp;&nbsp;&nbsp;overlay: #3085a3
+							});
+							//border color can be changed in CSS
+						</pre>
+					</div>
+				<h2>Milo</h2>
+				<div class="grid">
+					<figure class="tile-15">
+						<img src="../img/pattern1.jpg"/>
+						<figcaption>
+							<h2>This is <span>Milo</span></h2>
+							<p>Milo has a scaling background and a small caption.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="tile-15 last">
+						<img src="../img/pattern2.jpg" />
+						<figcaption>
+							<h2>This is <span>Milo</span></h2>
+							<p>Milo has a scaling background and a small caption.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<div class="options-wrapper">
+						<h3> Options </h3>
+						<table>
+							<tr>
+								<td>fx:</td>
+								<td>'milo'</td>
+							</tr>
+							<tr>
+								<td>figWidth   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>figHeight   :</td>
+								<td>px | % | em</td>
+							</tr>
+							<tr>
+								<td>headColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>captionColor   :</td>
+								<td>hex | html color</td>
+							</tr>
+							<tr>
+								<td>overlay   :</td>
+								<td>hex | html color | CSS3 gradient</td>
+							</tr>
+						</table>
+					</div>
+					<div class="example-wrapper">
+						<h3> Example</h3>
+						<pre>
+							$('.myElement').captionHover({
+								&nbsp;&nbsp;&nbsp;&nbsp;fx: 'milo',
+								&nbsp;&nbsp;&nbsp;&nbsp;headColor: '#fff',
+								&nbsp;&nbsp;&nbsp;&nbsp;captionColor: #fff,
+								&nbsp;&nbsp;&nbsp;&nbsp;overlay: #2e5d5a
+							});
+							//border color can be changed in CSS
+						</pre>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="../js/captionHover.dev.js"></script>
+
+	<script>
+		$(function() {
+			$('.tile-1').captionHover({
+				fx: 'lily'
+			});
+
+			$('.tile-2').captionHover({
+				fx: 'sadie'
+			});
+
+			$('.tile-3').captionHover({
+				fx: 'honey'
+			});
+
+			$('.tile-4').captionHover({
+				fx: 'layla'
+			});
+
+			$('.tile-5').captionHover({
+				fx: 'zoe'
+			});
+
+			$('.tile-6').captionHover({
+				fx: 'oscar'
+			});
+
+			$('.tile-7').captionHover({
+				fx: 'marley'
+			});
+
+			$('.tile-8').captionHover({
+				fx: 'ruby'
+			});
+			$('.tile-9').captionHover({
+				fx: 'roxy'
+			});
+			$('.tile-10').captionHover({
+				fx: 'sophie'
+			});
+			$('.tile-11').captionHover({
+				fx: 'romeo'
+			});
+			$('.tile-12').captionHover({
+				fx: 'dexter'
+			});
+			$('.tile-13').captionHover({
+				fx: 'sarah'
+			});
+			$('.tile-14').captionHover({
+				fx: 'chico'
+			});
+			$('.tile-15').captionHover({
+				fx: 'milo'
+			});
+		});
+	</script>
+
+	</body>
+</html>
