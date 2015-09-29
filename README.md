@@ -7,7 +7,7 @@ An easy jQuery plugin with CSS3 hover effects for tiles with figures and figcapt
  Support: Chrome, Firefox, IE10+
  
  Usage:  
-  Download from GitHub and add <strong>main.css and captionHover.js to your project.
+  Download from GitHub and add <strong>main.css</strong> and <strong>captionHover.js</strong> to your project.
 	Build the HTML structure like the demos below. 
 	Add the js call before the /body to initiate the plugin with the desired effect and options. View examples below.
 	
